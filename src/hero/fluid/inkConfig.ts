@@ -60,13 +60,11 @@ export const inkConfig = {
     light: { water: '#ece3d0', glass: '#fbf4e6' } as ThemeTint,
   },
 
-  // — The 5 selectable inks — traditional Japanese pigments —
+// — The 5 selectable inks — colors of Pakistan and Finland —
   swatches: [
-    { id: 'beni', name: 'Beni', hex: '#b23a2e' },
-    { id: 'sumi', name: 'Sumi', hex: '#3a3530' },
-    { id: 'ai', name: 'Ai', hex: '#2c4a60' },
-    { id: 'rokusho', name: 'Rokushō', hex: '#5e7b58' },
-    { id: 'kincha', name: 'Kincha', hex: '#a97b30' },
+    { id: 'pak-green', name: 'Pakistan Green', hex: '#115740' },
+    { id: 'pak-white', name: 'Pak-Fin White', hex: '#FFFFFF' },
+    { id: 'fin-blue', name: 'Finland Blue', hex: '#002F6C' },
   ] as Swatch[],
 } as const
 

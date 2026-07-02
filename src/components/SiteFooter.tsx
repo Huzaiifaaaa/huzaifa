@@ -4,7 +4,7 @@ export function SiteFooter() {
   return (
     <footer className="footer">
       <div className="footer-inner">
-        <span>© {new Date().getFullYear()} Huzaifa / حذیفہ</span>
+        <span>© {new Date().getFullYear()} Huzaifa</span>
         <div className="footer-links">
           <a href={profile.links.github} target="_blank" rel="noopener noreferrer">
             GitHub
