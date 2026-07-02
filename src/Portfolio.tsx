@@ -3,6 +3,8 @@ import { SiteFooter } from './components/SiteFooter'
 import { Hero } from './sections/Hero'
 import { WorkSection } from './sections/WorkSection'
 import { PathSection } from './sections/PathSection'
+import { ResearchSection } from './sections/ResearchSection'
+import { ProductSection } from './sections/ProductSection'
 import { ContactSection } from './sections/ContactSection'
 
 /** Single-page sumi-e portfolio: hero → work → pond → path → lab → voices → contact. */
@@ -14,6 +16,8 @@ export function Portfolio() {
         <Hero />
         <WorkSection />
         <PathSection />
+        <ResearchSection />
+        <ProductSection />
         <ContactSection />
       </main>
       <SiteFooter />
