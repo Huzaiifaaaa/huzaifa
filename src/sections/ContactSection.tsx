@@ -7,7 +7,7 @@ export function ContactSection() {
     <section id="contact" className="section">
       <div className="contact-inner">
         <Reveal>
-          <div className="section-kicker">結 — Contact</div>
+          <div className="section-kicker">Contact</div>
         </Reveal>
         <Reveal delay={0.05}>
           <h2 className="contact-title">
@@ -17,7 +17,7 @@ export function ContactSection() {
         <Reveal delay={0.1}>
           <div className="contact-actions">
             <a className="btn btn--seal" href={`mailto:${profile.email}`}>
-              Send email
+              Email
             </a>
             <a className="btn btn--ghost" href={profile.links.linkedin} target="_blank" rel="noopener noreferrer">
               LinkedIn

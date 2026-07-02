@@ -1,5 +1,5 @@
 import { Reveal } from '../components/ui/Reveal'
-import { education, recognition } from '../data/education'
+import { education } from '../data/education'
 import { skills } from '../data/skills'
 
 export function PathSection() {
@@ -8,8 +8,7 @@ export function PathSection() {
       <div className="section-inner">
         <div className="path-grid">
           <Reveal>
-            <div className="section-kicker">道 — Education</div>
-            <h2 className="path-col-title">Degrees &amp; recognition</h2>
+            <div className="section-kicker">Education</div>
             {education.map((edu) => (
               <div className="edu-item" key={edu.degree}>
                 <div className="edu-head">
@@ -29,9 +28,9 @@ export function PathSection() {
                   {edu.grade ? <span className="edu-grade">{edu.grade}</span> : null}
                 </div>
                 {edu.note ? <p className="edu-note">{edu.note}</p> : null}
+                {edu.courses ? <p className="edu-note">{edu.courses}</p> : null}
               </div>
             ))}
-            <p className="path-recognition">{recognition}</p>
           </Reveal>
 
           <Reveal delay={0.08}>

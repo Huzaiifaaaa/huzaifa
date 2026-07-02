@@ -2,11 +2,8 @@ import { Header } from './components/Header'
 import { SiteFooter } from './components/SiteFooter'
 import { Hero } from './sections/Hero'
 import { WorkSection } from './sections/WorkSection'
-import { LabSection } from './sections/LabSection'
 import { PathSection } from './sections/PathSection'
-import { TestimonialsSection } from './sections/TestimonialsSection'
 import { ContactSection } from './sections/ContactSection'
-import { KoiPondSection } from './pond/KoiPondSection'
 
 /** Single-page sumi-e portfolio: hero → work → pond → path → lab → voices → contact. */
 export function Portfolio() {
@@ -16,10 +13,7 @@ export function Portfolio() {
       <main id="top">
         <Hero />
         <WorkSection />
-        <KoiPondSection />
         <PathSection />
-        <LabSection />
-        <TestimonialsSection />
         <ContactSection />
       </main>
       <SiteFooter />

@@ -9,27 +9,25 @@ export type Education = {
   /** Highlighted grade badge, e.g. MSc GPA */
   grade?: string
   note?: string
+  courses?: string
 }
-
 export const education: Education[] = [
   {
-    degree: 'MSc Computer Science',
-    school: 'University of Helsinki',
-    period: 'Sep 2025 — May 2027',
-    logo: '/images/education/helsinki.svg',
+    degree: 'MSc Computer Science & Engineering',
+    school: 'University of Oulu',
+    period: 'Sep 2025 — Jun 2027',
+    logo: '/images/education/oulu.png',
     logoTheme: 'mono',
-    grade: 'Grade 4.8 / 5',
-    note: 'Courses: Machine learning, MLOps, Docker, Kubernetes (ongoing), distributed systems, and scalable architecture.',
+    note: 'Specialization: Cyber Security, Software & Data Security.',
+    courses: 'Courses: Distributed Systems, Advanced Software Quality & Security, Cryptographic Systems & their Weaknesses, Security Engineering, Professional Software Engineering Processes & Human Factors, Data Mining, International Crisis Management.',
   },
   {
     degree: 'BSc Computer Science',
-    school: 'NUST · Islamabad',
-    period: 'Sep 2020 — Jun 2024',
+    school: 'National University of Sciences & Technology',
+    period: 'Aug 2020 — May 2024',
     logo: '/images/education/nust.svg',
     logoTheme: 'color',
-    note: 'Final-year project: WebXR metaverse classroom with a fine-tuned LLaMA-2 7B model on Meta Quest 2.',
+    note: 'Thesis: OptiGuard — attention-driven, explainable glaucoma classification, published at IEEE EMBC 2025.',
+    courses: 'Courses: Data Structures & Algorithms, Database Systems, Web Engineering, Software Engineering, Information Security, Distributed Computing, Artificial Intelligence, Deep Learning, Operating Systems, Computer Networks.',
   },
 ]
-
-export const recognition =
-  'Slush 2025 volunteer · UN Millennium Fellow (top 9% of 44,000 applicants) · Campus Director, top 1%.'

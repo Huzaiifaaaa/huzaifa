@@ -69,13 +69,8 @@ export function WorkSection() {
         <Reveal>
           <div className="section-head">
             <div>
-              <div className="section-kicker">選 — Experience</div>
-              <h2 className="section-title">Owned in production</h2>
+              <div className="section-kicker">Experience</div>
             </div>
-            <p className="section-lead">
-              Three places I was trusted to own the real thing — a payment gateway at scale, a
-              startup run as its only engineer, and open-source database internals. 
-            </p>
           </div>
         </Reveal>
 

@@ -1,13 +1,12 @@
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
 import { CvMenu } from './CvMenu'
 import { ThemeToggle } from './ThemeToggle'
 
 const LINKS = [
   { href: '#experience', label: 'Experience' },
   { href: '#education', label: 'Education' },
-  { href: '#lab', label: 'Lab' },
-  { href: '#testimonials', label: 'Testimonials' },
+  { href: '#research', label: 'Research' },
+  { href: '#product', label: 'Product' },
   { href: '#contact', label: 'Contact' },
 ]
 
@@ -25,15 +24,7 @@ export function Header() {
   return (
     <header className={`nav ${scrolled ? 'is-scrolled' : ''}`}>
       <div className="nav-inner">
-        <a className="nav-brand" href="#top" aria-label="Kamlesh Kumar — top" onClick={() => setOpen(false)}>
-          <span className="nav-seal" aria-hidden="true">
-            墨
-          </span>
-          <span className="nav-name">
-            Kamlesh
-            <br />
-            Kumar
-          </span>
+        <a className="nav-brand" href="#top" aria-label="Huzaifa — top" onClick={() => setOpen(false)}>
         </a>
 
         <div className="nav-end">
@@ -43,9 +34,6 @@ export function Header() {
                 {link.label}
               </a>
             ))}
-            <Link to="/startups" className="nav-link nav-link--accent" onClick={() => setOpen(false)}>
-              Startups ↗
-            </Link>
             <CvMenu />
           </nav>
 

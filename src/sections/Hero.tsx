@@ -25,7 +25,7 @@ export function Hero() {
       )}
       <div className="hero-frame" aria-hidden="true" />
       <div className="hero-watermark" aria-hidden="true">
-        墨と水
+        
       </div>
 
       <div className="scene-overlay">
@@ -35,7 +35,7 @@ export function Hero() {
             {profile.location} · open to roles
           </span>
           <h1 className="hero-name">
-            Kamlesh <em>Kumar</em>
+            Muhammad <em>Huzaifa</em>
           </h1>
           <p className="hero-role">{profile.title}</p>
           <p className="hero-tagline">{profile.headline}</p>
@@ -43,7 +43,7 @@ export function Hero() {
 
         <div className="hero-bottom">
           <div className="ink-dock" role="group" aria-label="Ink color">
-            <span className="ink-dock-label">墨 — drag the water · pick an ink</span>
+            <span className="ink-dock-label">drag the water · pick an ink</span>
             <div className="ink-swatches">
               {inkConfig.swatches.map((s) => (
                 <button

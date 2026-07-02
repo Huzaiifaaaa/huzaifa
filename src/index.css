@@ -813,7 +813,7 @@ html.lenis body {
   font-size: 1rem;
   line-height: 1.65;
   color: var(--ink2);
-  max-width: 62ch;
+  max-width: 80ch;
   margin-bottom: 18px;
 }
 .work-points {

@@ -1,18 +1,18 @@
 export const profile = {
-  name: 'Kamlesh Kumar',
-  title: 'AI Full-Stack Engineer',
+  name: 'Muhammad Huzaifa',
+  title: 'Software Engineer (Full Stack)',
   headline: 'Hand me the part that has to work. I’ll own it end to end.',
   tagline:
     'Full-stack engineer on a PCI DSS Level 1 payment gateway, and the only engineer on a live recruitment platform (1,600+ users, 250+ companies). MSc Computer Science, University of Helsinki.',
   summary:
     'Full-Stack Software Engineer and MSc Computer Science student at the University of Helsinki, with 2+ years owning production systems end to end. I take on the work most people would rather not touch — payment routing, PCI-compliant APIs, database internals — and I see it through: from a fintech gateway moving hundreds of millions of euros to a recruitment platform I ran as its only engineer.',
-  location: 'Helsinki, Finland',
-  email: 'kamlesh.kumar@helsinki.fi',
-  phone: '+358 44 939 3428',
+  location: 'Oulu, Finland',
+  email: 'mhuzaifa25@student.oulu.fi',
+  phone: '+358 46 664 9442',
   links: {
-    linkedin: 'https://linkedin.com/in/kamlesh-kumar-389847224',
-    github: 'https://github.com/KamleshKumar427',
-    stackoverflow: 'https://stackoverflow.com/users/15808441/kamlesh-kumar',
+    linkedin: 'https://linkedin.com/in/huzaiifaaaa',
+    github: 'https://github.com/huzaiifaaaa',
+    stackoverflow: 'https://stackoverflow.com/users/16631465/huzaifa',
   },
   cv: {
     /** Served from public/downloads/ — copied to dist root on build (GitHub Pages). */
