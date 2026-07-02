@@ -64,7 +64,7 @@ function ProductRow({ product }: { product: Product }): ReactNode {
 
 export function ProductSection() {
   return (
-    <section id="products" className="section section--alt">
+    <section id="products" className="section">
       <div className="section-inner">
         <Reveal>
           <div className="section-head">
