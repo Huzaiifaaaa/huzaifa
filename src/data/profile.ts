@@ -7,7 +7,7 @@ export const profile = {
   summary:
     'Full-Stack Software Engineer and MSc Computer Science student at the University of Helsinki, with 2+ years owning production systems end to end. I take on the work most people would rather not touch — payment routing, PCI-compliant APIs, database internals — and I see it through: from a fintech gateway moving hundreds of millions of euros to a recruitment platform I ran as its only engineer.',
   location: 'Oulu, Finland',
-  email: 'mhuzaifa25@student.oulu.fi',
+  email: 'huzaiifaaaa@gmail.com',
   phone: '+358 46 664 9442',
   links: {
     linkedin: 'https://linkedin.com/in/huzaiifaaaa',
@@ -16,8 +16,8 @@ export const profile = {
   },
   cv: {
     /** Served from public/downloads/ — copied to dist root on build (GitHub Pages). */
-    path: '/downloads/Kamlesh_Kumar_CV.pdf',
-    filename: 'Kamlesh_Kumar_CV.pdf',
+    path: '/downloads/Huzaifa_Resume.pdf',
+    filename: 'Huzaifa_Resume.pdf',
   },
   metrics: [
     { value: 'PCI DSS L1', label: 'payment gateway' },
