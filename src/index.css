@@ -10,8 +10,8 @@
 [data-theme='light'] {
   color-scheme: light;
 
-  --paper: #f0e8d7; /* page */
-  --paper-2: #ece2cf; /* alternating section */
+  --paper: #ffffff; /* page */
+  --paper-2: #ffffff; /* alternating section */
   --paper-3: #ece3d0; /* hero / soft panels */
   --card: #f4eddd; /* raised cards */
   --ink: #1d1a16; /* primary text */
@@ -19,8 +19,8 @@
   --line: #d9cfb9; /* hairline */
   --seal: #b23a2e; /* vermilion accent */
   --seal-ink: #f4efe4; /* text on the seal */
-  --hover: rgba(247, 242, 231, 0.55);
-  --nav-bg: rgba(240, 232, 215, 0.82);
+  --hover: #ffffff;
+  --nav-bg: ffffff;
   --media: repeating-linear-gradient(135deg, #e7dcc4 0 14px, #e1d4b8 14px 28px);
 
   --font-serif: 'Shippori Mincho', Georgia, 'Times New Roman', serif;

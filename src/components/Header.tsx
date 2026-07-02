@@ -37,7 +37,7 @@ export function Header() {
             <CvMenu />
           </nav>
 
-          <ThemeToggle />
+          {/* <ThemeToggle /> */}
 
           <button
             type="button"
