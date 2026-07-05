@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { CvMenu } from './CvMenu'
+import { ThemeToggle } from './ThemeToggle'
 
 const LINKS = [
   { href: '#experience', label: 'Experience' },
@@ -36,7 +37,7 @@ export function Header() {
             <CvMenu />
           </nav>
 
-          {/* <ThemeToggle /> */}
+          <ThemeToggle />
 
           <button
             type="button"

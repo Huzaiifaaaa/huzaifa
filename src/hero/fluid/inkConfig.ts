@@ -55,10 +55,10 @@ export const inkConfig = {
   },
 
   // — Per-theme water + glass tints (washi paper / sumi ink moods) —
-tints: {
-  dark: { water: '#ffffff', glass: '#cfdde4' } as ThemeTint,
-  light: { water: '#ffffff', glass: '#fbf4e6' } as ThemeTint,
-},
+  tints: {
+    dark: { water: '#0e1014', glass: '#cfdde4' } as ThemeTint,
+    light: { water: '#ece3d0', glass: '#fbf4e6' } as ThemeTint,
+  },
 
 // — The 5 selectable inks — colors of Pakistan and Finland —
   swatches: [
