@@ -42,7 +42,7 @@ export function Hero() {
         </div>
 
         <div className="hero-bottom">
-          <div className="ink-dock" role="group" aria-label="Ink color">
+          {/* <div className="ink-dock" role="group" aria-label="Ink color">
             <span className="ink-dock-label">drag the water · pick an ink</span>
             <div className="ink-swatches">
               {inkConfig.swatches.map((s) => (
@@ -60,12 +60,12 @@ export function Hero() {
                 />
               ))}
             </div>
-          </div>
+          </div> */}
 
-          <a className="hero-scroll" href="#experience" aria-label="Scroll to experience">
+          {/* <a className="hero-scroll" href="#experience" aria-label="Scroll to experience">
             <span className="hero-scroll-label">scroll</span>
             <span className="hero-scroll-line" aria-hidden="true" />
-          </a>
+          </a> */}
         </div>
       </div>
     </section>

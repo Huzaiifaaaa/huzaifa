@@ -153,7 +153,7 @@ export function HeroFluid({ color, isDark }: HeroFluidProps) {
 
   return (
     <div ref={containerRef} className={`hero-fluid ${unsupported ? 'is-fallback' : ''}`}>
-      <canvas ref={canvasRef} className="hero-fluid-canvas" aria-hidden="true" />
+      
     </div>
   )
 }

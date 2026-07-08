@@ -437,8 +437,8 @@ html.lenis body {
   justify-content: center;
   overflow: hidden;
   isolation: isolate;
-  background: var(--paper-3);
-  border-bottom: 1px solid var(--line);
+  background: var(--paper-2);
+  /* border-bottom: 1px solid var(--line); */
 }
 .hero-fluid {
   position: absolute;
