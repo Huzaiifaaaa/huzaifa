@@ -16,8 +16,25 @@ export type Experience = {
 }
 
 export const experience: Experience[] = [
+{
+  n: '01',
+  meta: ['2026', 'INTERNSHIP', 'OULU · FINLAND'],
+  kicker: 'University of Oulu',
+  title: 'Research Trainee — Cyber Security',
+  summary:
+    'Research engineer contributing to the open-source AVISE framework, specializing in the safety, robustness, and vulnerability assessment of AI systems. Spearheading the extension of the framework to evaluate Text-to-Image (Txt2Image) models against adversarial threats while formalizing benchmark findings for an upcoming research publication.',
+  points: [
+    'Extending the core capabilities of the AVISE (AI Vulnerability Identification & Security Evaluation) framework to support safety assessments of Text-to-Image (Txt2Image) generative models.',
+    'Designing comprehensive Security Evaluation Tests (SETs) utilizing adversarial, harmful, and evasive prompts to uncover model vulnerabilities.',
+    'Co-authoring a forthcoming research paper to formalize methodology, document security vulnerabilities, and benchmark Txt2Image evaluation findings.',
+    'Configured automated local testing environments using Docker containerization to run and isolate target models during security evaluations.',
+    'Leveraged advanced configuration management to build custom Connectors and adapt template attack prompts for multi-turn adversarial scenarios.',
+  ],
+  tech: ['Python', 'Docker', 'VS Code', 'Google Colab', 'GitHub'],
+  href: 'https://github.com/ouspg/AVISE',
+},
   {
-    n: '01',
+    n: '02',
     meta: ['2024–2026', 'FULL-TIME', 'IRELAND · REMOTE'],
     kicker: 'Datapulse Technologies',
     title: 'Full-Stack Software Engineer — Fintech',
@@ -35,7 +52,7 @@ export const experience: Experience[] = [
     href: 'https://pbtgateway.com/',
   },
   {
-    n: '02',
+    n: '03',
     meta: ['2022–2024', 'PART TIME', 'ISLAMABAD, PAKISTAN'],
     kicker: 'Rapidev',
     title: 'Trainee Engineer — DefTech',
@@ -50,7 +67,7 @@ export const experience: Experience[] = [
     href: 'https://rapidev.ae',
   },
   {
-    n: '03',
+    n: '04',
     meta: ['2023', 'INTERNSHIP', 'SAN FRANCISCO, USA · REMOTE'],
     kicker: 'Bitnine',
     title: 'Software Engineer - Open Source',

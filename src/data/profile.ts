@@ -21,7 +21,5 @@ export const profile = {
   },
   metrics: [
     { value: 'PCI DSS L1', label: 'payment gateway' },
-    { value: '1,600+', label: 'xstryv users' },
-    { value: '5/5', label: 'msc · helsinki' },
   ],
 } as const
