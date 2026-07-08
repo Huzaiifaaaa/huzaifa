@@ -70,7 +70,7 @@ export const experience: Experience[] = [
     n: '04',
     meta: ['2023', 'INTERNSHIP', 'SAN FRANCISCO, USA · REMOTE'],
     kicker: 'Bitnine',
-    title: 'Software Engineer - Open Source',
+    title: 'Software Engineer — Open Source',
     summary:
       'Contributed to Apache\u2019s open-source graph-based software solutions, extending PostgreSQL\u2019s capabilities via AGE, a graph extension for advanced data handling.',
     points: [
