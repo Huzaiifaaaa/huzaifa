@@ -11,7 +11,7 @@ const HeroFluid = lazy(() =>
 export function Hero() {
   const isDark = useIsDark()
   const reduced = useReducedMotion()
-  const [activeId, setActiveId] = useState(inkConfig.swatches[0].id)
+  const [activeId/*, setActiveId*/] = useState(inkConfig.swatches[0].id)
   const active = inkConfig.swatches.find((s) => s.id === activeId) ?? inkConfig.swatches[0]
 
   return (
