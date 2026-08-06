@@ -25,6 +25,12 @@ export function Header() {
     <header className={`nav ${scrolled ? 'is-scrolled' : ''}`}>
       <div className="nav-inner">
         <a className="nav-brand" href="#top" aria-label="Huzaifa — top" onClick={() => setOpen(false)}>
+          <span className="nav-seal" aria-hidden="true">墨</span>
+          <span className="nav-name">
+            Muhammad
+            <br />
+            Huzaifa
+          </span>
         </a>
 
         <div className="nav-end">

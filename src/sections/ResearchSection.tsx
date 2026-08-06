@@ -17,7 +17,6 @@ function RowBody({ pub }: { pub: Publication }) {
         <div className="work-kicker">{pub.venue}, {pub.location}</div>
         <h3 className="work-title">{pub.title}</h3>
         <p className="work-authors">{pub.authors.join(', ')}</p>
-        <br />
         <p className="work-summary">{pub.summary}</p>
         <div className="work-points">
           {pub.highlights.map((point) => (
@@ -33,7 +32,6 @@ function RowBody({ pub }: { pub: Publication }) {
             </li>
           ))}
         </ul>
-        <br />
         {pub.links.length > 0 ? (
           <ul className="research-links">
             {pub.links.map((link) => (
@@ -51,22 +49,9 @@ function RowBody({ pub }: { pub: Publication }) {
 }
 
 function ResearchRow({ pub }: { pub: Publication }): ReactNode {
-  const primaryHref = pub.links[0]?.href
-  if (primaryHref) {
-    return (
-      <a
-        className="work-row work-row--link"
-        href={primaryHref}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <RowBody pub={pub} />
-        <span className="work-row-arrow" aria-hidden="true">
-          ↗
-        </span>
-      </a>
-    )
-  }
+  // Publications link out via their own named "IEEE Xplore ↗" / "Project Page ↗"
+  // links inside RowBody, so the row itself must stay a <div> — wrapping it in
+  // an outer <a> (like Work/Product rows do) would nest <a> inside <a>.
   return (
     <div className="work-row">
       <RowBody pub={pub} />
