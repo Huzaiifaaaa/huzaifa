@@ -37,7 +37,7 @@ export function PathSection() {
             <div className="skills-label">Tools &amp; Materials</div>
             <div className="skills">
               {skills.map((group) => (
-                <div key={group.label}>
+                <div className="skill-group" key={group.label}>
                   <div className="skill-label">{group.label}</div>
                   <ul className="tags">
                     {group.items.map((item) => (
