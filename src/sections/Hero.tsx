@@ -24,9 +24,6 @@ export function Hero() {
         </Suspense>
       )}
       <div className="hero-frame" aria-hidden="true" />
-      <div className="hero-watermark" aria-hidden="true">
-        
-      </div>
 
       <div className="scene-overlay">
         <div className="hero-id">
@@ -38,7 +35,6 @@ export function Hero() {
             Muhammad <em>Huzaifa</em>
           </h1>
           <p className="hero-role">{profile.title}</p>
-          <p className="hero-tagline">{profile.headline}</p>
         </div>
 
         <div className="hero-bottom">

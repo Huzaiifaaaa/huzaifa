@@ -1,7 +1,6 @@
 export const profile = {
   name: 'Muhammad Huzaifa',
   title: 'Software Engineer (Full Stack)',
-  headline: 'Hand me the part that has to work. I’ll own it end to end.',
   location: 'Oulu, Finland',
   email: 'huzaiifaaaa@gmail.com',
   phone: '+358 46 664 9442',

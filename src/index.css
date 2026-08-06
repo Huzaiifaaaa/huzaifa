@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400..800;1,400..700&family=JetBrains+Mono:wght@400;500&display=swap');
 @import 'tailwindcss';
 
 /* ════════════════════════════════════════════════════════════════
-   SUMI-E PORTFOLIO — Japanese ink-wash design system.
-   Light = "washi" (warm paper). Dark = "sumi" (warm charcoal).
+   PORTFOLIO — modern minimal / editorial design system.
+   One grotesk sans (Inter) throughout, mono for labels/meta,
+   a neutral paper/ink base with a single confident accent.
    ════════════════════════════════════════════════════════════════ */
 
 :root,
@@ -11,22 +12,21 @@
   color-scheme: light;
 
   --paper: #ffffff; /* page */
-  --paper-2: #ffffff; /* alternating section */
-  --paper-3: #ece3d0; /* hero / soft panels */
-  --card: #f4eddd; /* raised cards */
-  --ink: #1d1a16; /* primary text */
-  --ink2: #5e564a; /* secondary text */
-  --line: #d9cfb9; /* hairline */
-  --seal: #b23a2e; /* vermilion accent — primary */
-  --seal-ink: #f4efe4; /* text on the seal */
+  --paper-2: #f8f8f7; /* alternating section */
+  --paper-3: #f2f2f0; /* hero / soft panels */
+  --card: #f4f4f2; /* raised cards */
+  --ink: #0a0a0a; /* primary text */
+  --ink2: #666663; /* secondary text */
+  --line: #e6e6e3; /* hairline */
+  --seal: #b23a2e; /* accent — primary */
+  --seal-ink: #fafaf9; /* text on the accent */
   --seal-fi: #2f5f8a; /* Finland-blue ink — Research accent */
   --seal-pk: #1f6b4a; /* Pakistan-green ink — Product accent */
-  --hover: #ffffff;
-  --nav-bg: ffffff;
-  --media: repeating-linear-gradient(135deg, #e7dcc4 0 14px, #e1d4b8 14px 28px);
+  --hover: #f2f2f0;
+  --nav-bg: rgba(255, 255, 255, 0.82);
 
-  --font-serif: 'Shippori Mincho', Georgia, 'Times New Roman', serif;
-  --font-sans: 'Zen Kaku Gothic New', system-ui, sans-serif;
+  --font-display: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', monospace;
 
   --maxw: 1180px;
@@ -36,40 +36,38 @@
 [data-theme='dark'] {
   color-scheme: dark;
 
-  --paper: #14110c;
-  --paper-2: #19150f;
-  --paper-3: #100d09;
-  --card: #1d1810;
-  --ink: #ece3d0;
-  --ink2: #a89a82;
-  --line: rgba(236, 227, 208, 0.13);
+  --paper: #050505;
+  --paper-2: #0a0a0a;
+  --paper-3: #0d0d0d;
+  --card: #111111;
+  --ink: #f2f2f0;
+  --ink2: #8f8f8c;
+  --line: rgba(255, 255, 255, 0.1);
   --seal: #d4533f;
-  --seal-ink: #140f0c;
+  --seal-ink: #0a0a0a;
   --seal-fi: #6fa3d8;
   --seal-pk: #4caf82;
-  --hover: rgba(236, 227, 208, 0.05);
-  --nav-bg: rgba(20, 17, 12, 0.78);
-  --media: repeating-linear-gradient(135deg, #221c13 0 14px, #2a2218 14px 28px);
+  --hover: rgba(255, 255, 255, 0.06);
+  --nav-bg: rgba(5, 5, 5, 0.78);
 }
 
 /* honour the OS once before JS sets data-theme (avoids flash) */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
     color-scheme: dark;
-    --paper: #14110c;
-    --paper-2: #19150f;
-    --paper-3: #100d09;
-    --card: #1d1810;
-    --ink: #ece3d0;
-    --ink2: #a89a82;
-    --line: rgba(236, 227, 208, 0.13);
+    --paper: #050505;
+    --paper-2: #0a0a0a;
+    --paper-3: #0d0d0d;
+    --card: #111111;
+    --ink: #f2f2f0;
+    --ink2: #8f8f8c;
+    --line: rgba(255, 255, 255, 0.1);
     --seal: #d4533f;
-    --seal-ink: #140f0c;
+    --seal-ink: #0a0a0a;
     --seal-fi: #6fa3d8;
     --seal-pk: #4caf82;
-    --hover: rgba(236, 227, 208, 0.05);
-    --nav-bg: rgba(20, 17, 12, 0.78);
-    --media: repeating-linear-gradient(135deg, #221c13 0 14px, #2a2218 14px 28px);
+    --hover: rgba(255, 255, 255, 0.06);
+    --nav-bg: rgba(5, 5, 5, 0.78);
   }
 }
 
@@ -243,16 +241,17 @@ html.lenis body {
   text-decoration: none;
 }
 .nav-seal {
-  width: 40px;
-  height: 40px;
+  width: 38px;
+  height: 38px;
   border-radius: 9px;
   background: var(--seal);
   display: grid;
   place-items: center;
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-weight: 700;
+  letter-spacing: -0.02em;
   color: var(--seal-ink);
-  font-size: 20px;
+  font-size: 13.5px;
   box-shadow: 0 8px 22px -10px var(--seal);
   flex-shrink: 0;
 }
@@ -432,7 +431,7 @@ html.lenis body {
 }
 
 /* ════════════════════════════════════════════════════════════════
-   HERO (keeps the existing fluid sim; restyled to washi)
+   HERO
    ════════════════════════════════════════════════════════════════ */
 .hero {
   position: relative;
@@ -459,10 +458,10 @@ html.lenis body {
   height: 100%;
 }
 .hero-fluid.is-fallback {
-  background: radial-gradient(120% 95% at 32% 28%, #f4ecda 0%, #e7dcc4 58%, #ddd0b6 100%);
+  background: radial-gradient(120% 95% at 32% 28%, #f4f4f2 0%, #ececea 58%, #e2e2de 100%);
 }
 [data-theme='dark'] .hero-fluid.is-fallback {
-  background: radial-gradient(120% 95% at 32% 28%, #14161b 0%, #0f1115 58%, #0b0d10 100%);
+  background: radial-gradient(120% 95% at 32% 28%, #121212 0%, #0a0a0a 58%, #050505 100%);
 }
 /* tray frame */
 .hero-frame {
@@ -473,7 +472,6 @@ html.lenis body {
   border: 1px solid color-mix(in srgb, var(--ink) 16%, transparent);
 }
 
-/* hero overlay (scene-* shared with pond, overridden there) */
 .scene-overlay {
   position: absolute;
   inset: 0;
@@ -483,12 +481,6 @@ html.lenis body {
   flex-direction: column;
   justify-content: flex-end;
   padding: clamp(24px, 5vw, 76px);
-}
-.scene-titleblock {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  max-width: min(92vw, 640px);
 }
 .scene-eyebrow {
   display: inline-flex;
@@ -506,28 +498,6 @@ html.lenis body {
   border-radius: 50%;
   background: var(--seal);
   flex-shrink: 0;
-}
-.scene-title {
-  font-family: var(--font-serif);
-  font-weight: 600;
-  font-size: clamp(2rem, 5vw, 3.4rem);
-  line-height: 1.05;
-  letter-spacing: -0.01em;
-  color: var(--ink);
-}
-.scene-title em {
-  font-style: italic;
-  color: var(--seal);
-}
-.scene-cue {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  text-transform: lowercase;
-  color: var(--ink2);
-  display: inline-flex;
-  align-items: center;
-  gap: 9px;
 }
 
 /* ink dock — label over a swatch row, bottom-left */
@@ -567,22 +537,7 @@ html.lenis body {
   box-shadow: 0 0 0 2px var(--paper), 0 0 0 4px var(--seal), 0 2px 7px rgba(0, 0, 0, 0.25);
 }
 
-/* hero identity (bottom-left) + 墨と水 watermark */
-.hero-watermark {
-  position: absolute;
-  right: 3.5vw;
-  top: 50%;
-  transform: translateY(-50%);
-  writing-mode: vertical-rl;
-  font-family: var(--font-serif);
-  font-weight: 500;
-  font-size: min(34vh, 320px);
-  line-height: 0.78;
-  color: color-mix(in srgb, var(--ink) 6%, transparent);
-  z-index: 1;
-  pointer-events: none;
-  user-select: none;
-}
+/* hero identity (bottom-left) */
 .hero-id {
   display: flex;
   flex-direction: column;
@@ -590,7 +545,7 @@ html.lenis body {
   margin-bottom: clamp(26px, 5vh, 54px);
 }
 .hero-name {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-weight: 700;
   font-size: clamp(2.6rem, 7vw, 5rem);
   line-height: 1;
@@ -607,14 +562,6 @@ html.lenis body {
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--ink2);
-}
-.hero-tagline {
-  font-family: var(--font-serif);
-  font-size: clamp(1rem, 2vw, 1.2rem);
-  line-height: 1.45;
-  color: var(--ink2);
-  max-width: 34ch;
-  margin-top: 4px;
 }
 .hero-bottom {
   display: flex;
@@ -646,60 +593,8 @@ html.lenis body {
   animation: koi-bob 2.4s var(--ease) infinite;
 }
 @media (max-width: 560px) {
-  .hero-watermark {
-    font-size: 38vh;
-  }
   .hero-scroll {
     display: none;
-  }
-}
-
-/* ════════════════════════════════════════════════════════════════
-   STATS BAR — headline numbers, right under the hero.
-   ════════════════════════════════════════════════════════════════ */
-.stats-bar {
-  border-bottom: 1px solid var(--line);
-  background: var(--paper-2);
-}
-.stats-bar-inner {
-  max-width: var(--maxw);
-  margin: 0 auto;
-  padding: clamp(26px, 3.6vw, 40px) clamp(20px, 5vw, 64px);
-}
-.stats-bar-inner > div {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: clamp(18px, 3vw, 32px);
-}
-.stat {
-  border-left: 1px solid var(--line);
-  padding-left: clamp(14px, 1.6vw, 20px);
-}
-.stat-n {
-  font-family: var(--font-serif);
-  font-weight: 700;
-  font-size: clamp(1.7rem, 3vw, 2.3rem);
-  line-height: 1;
-  color: var(--seal);
-}
-.stat:nth-child(2) .stat-n {
-  color: var(--seal-pk);
-}
-.stat:nth-child(3) .stat-n {
-  color: var(--seal-fi);
-}
-.stat-l {
-  margin-top: 8px;
-  font-family: var(--font-mono);
-  font-size: 10.5px;
-  letter-spacing: 0.04em;
-  line-height: 1.5;
-  color: var(--ink2);
-}
-@media (max-width: 720px) {
-  .stats-bar-inner > div {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    row-gap: 24px;
   }
 }
 
@@ -776,7 +671,7 @@ html.lenis body {
   margin-bottom: 14px;
 }
 .section-title {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-weight: 700;
   font-size: clamp(2rem, 4.4vw, 3.1rem);
   line-height: 1.04;
@@ -834,7 +729,7 @@ html.lenis body {
   transform: translateX(0);
 }
 .work-num {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-weight: 600;
   font-size: clamp(2.4rem, 4vw, 3.2rem);
   line-height: 1;
@@ -857,7 +752,7 @@ html.lenis body {
   margin-bottom: 10px;
 }
 .work-title {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-weight: 600;
   font-size: clamp(1.45rem, 2.9vw, 2.1rem);
   line-height: 1.15;
@@ -886,8 +781,11 @@ html.lenis body {
   max-width: 64ch;
 }
 .work-point::before {
-  content: '◇';
-  color: var(--accent, var(--seal));
+  content: '';
+  width: 5px;
+  height: 5px;
+  margin-top: 8px;
+  background: var(--accent, var(--seal));
   flex-shrink: 0;
 }
 
@@ -952,7 +850,7 @@ html.lenis body {
   align-items: start;
 }
 .path-col-title {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-weight: 700;
   font-size: clamp(2rem, 4.4vw, 3.1rem);
   line-height: 1.04;
@@ -973,7 +871,7 @@ html.lenis body {
   align-items: baseline;
 }
 .edu-degree {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-weight: 600;
   font-size: 1.2rem;
   color: var(--ink);
@@ -1017,16 +915,6 @@ html.lenis body {
   line-height: 1.6;
   color: var(--ink2);
   margin-top: 10px;
-}
-.path-recognition {
-  font-size: 0.9rem;
-  line-height: 1.7;
-  color: var(--ink2);
-  margin-top: 20px;
-}
-.path-recognition::before {
-  content: '◇ ';
-  color: var(--seal);
 }
 .skills-label {
   font-family: var(--font-mono);
@@ -1079,19 +967,6 @@ html.lenis body {
   flex-direction: column;
   align-items: flex-start;
   gap: 22px;
-}
-.contact-title {
-  font-family: var(--font-serif);
-  font-weight: 700;
-  font-size: clamp(2.2rem, 5vw, 3.4rem);
-  line-height: 1.06;
-  letter-spacing: -0.01em;
-  color: var(--ink);
-  max-width: 18ch;
-}
-.contact-title em {
-  font-style: italic;
-  color: var(--seal);
 }
 .contact-actions {
   display: flex;

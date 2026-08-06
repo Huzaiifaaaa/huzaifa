@@ -54,7 +54,7 @@ export const inkConfig = {
     refraction: 0.55, // how much ink bends light beneath the glass
   },
 
-  // — Per-theme water + glass tints (washi paper / sumi ink moods) —
+  // — Per-theme water + glass tints —
   tints: {
     dark: { water: '#0e1014', glass: '#cfdde4' } as ThemeTint,
     light: { water: '#ece3d0', glass: '#fbf4e6' } as ThemeTint,

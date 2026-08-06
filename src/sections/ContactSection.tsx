@@ -9,11 +9,6 @@ export function ContactSection() {
         <Reveal>
           <div className="section-kicker">Contact</div>
         </Reveal>
-        <Reveal delay={0.05}>
-          <h2 className="contact-title">
-            Open to roles where <em>ownership</em> matters.
-          </h2>
-        </Reveal>
         <Reveal delay={0.1}>
           <div className="contact-actions">
             <a className="btn btn--seal" href={`mailto:${profile.email}`}>
