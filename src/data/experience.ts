@@ -1,4 +1,4 @@
-// Selected Work — the three roles, derived from Base_CV.pdf (source of truth).
+// Selected Work — derived from Base_One_Page.pdf (source of truth).
 export type Experience = {
   /** display index, e.g. "01" */
   n: string
@@ -16,37 +16,36 @@ export type Experience = {
 }
 
 export const experience: Experience[] = [
-{
-  n: '01',
-  meta: ['2026', 'INTERNSHIP', 'OULU · FINLAND'],
-  kicker: 'University of Oulu',
-  title: 'Research Trainee — Cyber Security',
-  summary:
-    'Research engineer contributing to the open-source AVISE framework, specializing in the safety, robustness, and vulnerability assessment of AI systems. Spearheading the extension of the framework to evaluate Text-to-Image (Txt2Image) models against adversarial threats while formalizing benchmark findings for an upcoming research publication.',
-  points: [
-    'Extending the core capabilities of the AVISE (AI Vulnerability Identification & Security Evaluation) framework to support safety assessments of Text-to-Image (Txt2Image) generative models.',
-    'Designing comprehensive Security Evaluation Tests (SETs) utilizing adversarial, harmful, and evasive prompts to uncover model vulnerabilities.',
-    'Co-authoring a forthcoming research paper to formalize methodology, document security vulnerabilities, and benchmark Txt2Image evaluation findings.',
-    'Configured automated local testing environments using Docker containerization to run and isolate target models during security evaluations.',
-    'Leveraged advanced configuration management to build custom Connectors and adapt template attack prompts for multi-turn adversarial scenarios.',
-  ],
-  tech: ['Python', 'Docker', 'VS Code', 'Google Colab', 'GitHub'],
-  href: 'https://github.com/ouspg/AVISE',
-},
+  {
+    n: '01',
+    meta: ['2026–Present', 'INTERNSHIP', 'OULU · FINLAND'],
+    kicker: 'University of Oulu',
+    title: 'Research Intern',
+    summary:
+      'Research intern extending the open-source AVISE security evaluation framework to Text-to-Image generative AI models, co-authoring a research paper formalizing the methodology.',
+    points: [
+      'Extended the open-source AVISE security evaluation framework to Text-to-Image generative models, designing adversarial and prompt-injection resistance tests across 5 model providers, including Nano Banana Pro (Gemini 3 Pro Image), Grok Imagine, and GPT-5.4 Image 2.',
+      'Co-authoring a research paper formalizing security vulnerability methodologies for generative AI systems, using Python, Docker, and OpenRouter.',
+      'Built OpenRouter-based model connectors enabling standardized, reproducible security evaluation across 4+ T2I model providers spanning Google, X-AI, OpenAI, and open-source diffusion architectures.',
+    ],
+    tech: ['Python', 'Docker', 'OpenRouter', 'GitHub'],
+    href: 'https://github.com/ouspg/AVISE',
+  },
   {
     n: '02',
     meta: ['2024–2026', 'FULL-TIME', 'IRELAND · REMOTE'],
-    kicker: 'Datapulse Technologies',
-    title: 'Full-Stack Software Engineer — Fintech',
+    kicker: 'Datapulse Technologies (FinTech)',
+    title: 'Full Stack Developer',
     summary:
-      'Full-stack engineer on an EU based whitelabel payment gateway spanning multiple regions, driving the transition from a legacy architecture to a high efficiency replacement system while leading day to day delivery across the engineering team. Owned CI/CD and cloud deployments, enabling repeatable, zero downtime releases on a single git push.',
+      "Full Stack Developer on multi-region whitelabel payment gateway — architected and delivered a full replacement platform end-to-end for a legacy system processing thousands of daily transactions.",
     points: [
-      'Improved performance 25% and cut latency on a legacy architecture handling thousands of daily transactions.',
-      'Integrated global acquirers (E-Comprocessing, Planet, Rapyd) and digital wallets (Apple Pay, Google Pay) across regions.',
-      'Unified independent physical terminals into a single gateway for card-present and card-not-present transactions.',
-      'Maintained a scalable microservices architecture processing thousands of daily transactions with high reliability and fault tolerance.',
-      'Led day-to-day engineering task allocation and code review, mentoring team members on the replacement gateway build.',
-      'Led PCI-DSS compliance activities — secure data handling, access controls, and audit logging via SIEM and Cloud Defender — coordinating directly with the compliance team.',
+      'Architected and delivered a full replacement payment gateway platform end-to-end, closing critical functional gaps in a legacy multi-region system used in production.',
+      'Improved system performance by 25% and reduced latency on a legacy whitelabel payment architecture, sustaining stability under peak transaction loads.',
+      'Integrated 3+ global acquirers (E-Comprocessing, Transflo, Rapyd) and digital wallets (Apple Pay, Google Pay) via REST APIs, enabling secure multi-region payment processing.',
+      'Unified fragmented physical terminal systems into a single gateway supporting both card-present and card-not-present transactions.',
+      'Built and scaled a microservices architecture (Java/Spring Boot) processing thousands of daily transactions with high fault tolerance.',
+      'Owned CI/CD pipeline design (GitHub → Jenkins → Docker → Kubernetes), enabling zero-downtime, single-push production releases.',
+      'Led PCI-DSS compliance readiness end-to-end, implementing secure data handling, access controls, and SIEM/Cloud Defender audit logging — closing 15+ audit findings ahead of certification.',
     ],
     tech: ['Java', 'Spring Boot', 'Hibernate', 'C#', 'ASP.NET Core', 'React JS', 'Azure', 'Docker', 'Kubernetes', 'Jenkins', 'PostgreSQL', 'MSSQL'],
     href: 'https://pbtgateway.com/',
@@ -54,16 +53,16 @@ export const experience: Experience[] = [
   {
     n: '03',
     meta: ['2022–2024', 'PART TIME', 'ISLAMABAD, PAKISTAN'],
-    kicker: 'Rapidev',
-    title: 'Trainee Engineer — DefTech',
+    kicker: 'Rapidev (DefTech)',
+    title: 'Trainee Engineer',
     summary:
-      'Contributed to RapiGuard, an Anti-UAV defense system for real-time detection and neutralization of aerial threats, integrating hardware sensors (detectors, jammers, spoofers) with software control applications for real-time response.',
+      'Contributed to RapiGuard, an Anti-UAV defense system, integrating hardware sensors for real-time aerial threat detection.',
     points: [
-      'Built a Key Management Application for secure radio communications, managing the lifecycle of encryption keys for mission-critical hardware.',
-      'Engineered cryptographic key injection into radio units over UART, ensuring secure and reliable data transfer between software and hardware.',
-      'Developed a Tactical Situational Awareness mobile app in Flutter for real-time geospatial data visualization on Android.',
+      'Integrated 3 hardware sensors into the RapiGuard Anti-UAV system, enabling real-time aerial threat detection.',
+      'Built a Key Management Application handling full encryption key lifecycles for critical military communications.',
+      'Engineered secure cryptographic key injection via UART, ensuring protected hardware-software data transfer for defense-grade systems.',
     ],
-    tech: ['C#', 'ASP.NET Core', 'Python', 'React JS', 'Flutter', 'SQL', 'UART'],
+    tech: ['C#', 'ASP.NET Core', 'Python', 'SQL', 'UART'],
     href: 'https://rapidev.ae',
   },
   {
@@ -72,7 +71,7 @@ export const experience: Experience[] = [
     kicker: 'Bitnine',
     title: 'Software Engineer — Open Source',
     summary:
-      'Contributed to Apache\u2019s open-source graph-based software solutions, extending PostgreSQL\u2019s capabilities via AGE, a graph extension for advanced data handling.',
+      'Contributed to Apache’s open-source graph-based solution, extending PostgreSQL’s capabilities via AGE, a graph extension for advanced data handling.',
     points: [
       'Developed the AG Cloud website, providing a user-friendly interface for accessing cloud-based graph solutions.',
       'Enhanced AGE functionality and performance as part of the core open-source contributor team.',

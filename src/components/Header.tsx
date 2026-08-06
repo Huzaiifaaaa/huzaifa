@@ -5,8 +5,8 @@ import { ThemeToggle } from './ThemeToggle'
 const LINKS = [
   { href: '#experience', label: 'Experience' },
   { href: '#education', label: 'Education' },
-  { href: '#research', label: 'Research' },
   { href: '#products', label: 'Product' },
+  { href: '#research', label: 'Research' },
   { href: '#contact', label: 'Contact' },
 ]
 
@@ -25,7 +25,7 @@ export function Header() {
     <header className={`nav ${scrolled ? 'is-scrolled' : ''}`}>
       <div className="nav-inner">
         <a className="nav-brand" href="#top" aria-label="Huzaifa — top" onClick={() => setOpen(false)}>
-          <span className="nav-seal" aria-hidden="true">MH</span>
+          {/* <span className="nav-seal" aria-hidden="true">MH</span> */}
           <span className="nav-name">
             Muhammad
             <br />

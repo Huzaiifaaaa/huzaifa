@@ -21,10 +21,10 @@ export const products: Product[] = [
     kicker: 'Founder & Sole Developer',
     title: 'Nafalytics — Stock Portfolio Tracking Platform',
     summary:
-      'Nafalytics \u2014 from "Nafa" (profit) and "analytics" \u2014 is a stock market portfolio tracking application built from scratch to fill a gap in the Pakistani market for reliable portfolio management tools. Built solo over 3 months and used by 250 users to track portfolios, real-time profit/loss, and trade activity.',
+      'Nafalytics \u2014 from "Nafa" (profit) and "analytics" \u2014 is a stock market portfolio tracking application built from scratch to fill a gap in the Pakistani market for reliable portfolio management tools. Built solo over 3 months and used by 300 active users to track portfolios, real-time profit/loss, and trade activity.',
     points: [
 
-      'Built and launched the product from scratch in 3 months, growing to 250 users tracking portfolios.',
+      'Built and launched the product from scratch in 3 months, growing to 300 active users tracking portfolios.',
       'Built market views with visual graphs for price action and portfolio performance, plus historical performance analytics.',
       'Implemented FIFO-based trade matching for accurate cost basis and realized gain/loss calculation.',
       'Implemented dividend tracking with automated dividend notifications.',
