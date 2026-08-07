@@ -20,7 +20,6 @@
   --line: #e6e6e3; /* hairline */
   --seal: #b23a2e; /* accent — primary */
   --seal-ink: #fafaf9; /* text on the accent */
-  --seal-fi: #2f5f8a; /* Finland-blue ink — Research accent */
   --hover: #f2f2f0;
   --nav-bg: rgba(255, 255, 255, 0.82);
 
@@ -45,7 +44,6 @@
   --line: rgba(255, 255, 255, 0.1);
   --seal: #d4533f;
   --seal-ink: #0a0a0a;
-  --seal-fi: #6fa3d8;
   --hover: rgba(255, 255, 255, 0.06);
   --nav-bg: rgba(5, 5, 5, 0.78);
 }
@@ -63,7 +61,6 @@
     --line: rgba(255, 255, 255, 0.1);
     --seal: #d4533f;
     --seal-ink: #0a0a0a;
-    --seal-fi: #6fa3d8;
     --hover: rgba(255, 255, 255, 0.06);
     --nav-bg: rgba(5, 5, 5, 0.78);
   }
@@ -687,7 +684,8 @@ html.lenis body {
   border-top: 1px solid var(--line);
 }
 .section--alt {
-  background: var(--paper-2);
+  /* All sections share one flat background now — matches body/footer. */
+  background: var(--paper);
 }
 .section-inner {
   max-width: var(--maxw);
@@ -870,20 +868,6 @@ html.lenis body {
   border-color: var(--accent, var(--ink));
 }
 
-/* Section identity — alternates black (plain ink, the default via the
-   var(--accent, var(--ink)) fallback used throughout) and Finland-blue down
-   the page: Experience / Product / Contact stay neutral, Education / Research
-   get the blue accent + a faint wash instead of flat neutral gray. */
-#education,
-#research {
-  --accent: var(--seal-fi);
-  background: color-mix(in srgb, var(--seal-fi) 6%, var(--paper));
-}
-[data-theme='dark'] #education,
-[data-theme='dark'] #research {
-  background: color-mix(in srgb, var(--seal-fi) 11%, var(--paper));
-}
-
 /* ════════════════════════════════════════════════════════════════
    PATH
    ════════════════════════════════════════════════════════════════ */
@@ -950,7 +934,7 @@ html.lenis body {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--seal-ink);
-  background: var(--accent, var(--seal));
+  background: var(--accent, var(--ink));
   padding: 3px 8px;
   border-radius: 100px;
 }
@@ -984,7 +968,7 @@ html.lenis body {
   font-size: 10.5px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--accent, var(--seal));
+  color: var(--accent, var(--ink));
   margin-bottom: 12px;
 }
 
