@@ -21,7 +21,6 @@
   --seal: #b23a2e; /* accent — primary */
   --seal-ink: #fafaf9; /* text on the accent */
   --seal-fi: #2f5f8a; /* Finland-blue ink — Research accent */
-  --seal-pk: #1f6b4a; /* Pakistan-green ink — Product accent */
   --hover: #f2f2f0;
   --nav-bg: rgba(255, 255, 255, 0.82);
 
@@ -47,7 +46,6 @@
   --seal: #d4533f;
   --seal-ink: #0a0a0a;
   --seal-fi: #6fa3d8;
-  --seal-pk: #4caf82;
   --hover: rgba(255, 255, 255, 0.06);
   --nav-bg: rgba(5, 5, 5, 0.78);
 }
@@ -66,7 +64,6 @@
     --seal: #d4533f;
     --seal-ink: #0a0a0a;
     --seal-fi: #6fa3d8;
-    --seal-pk: #4caf82;
     --hover: rgba(255, 255, 255, 0.06);
     --nav-bg: rgba(5, 5, 5, 0.78);
   }
@@ -148,18 +145,18 @@ html.lenis body {
 .tag {
   font-family: var(--font-mono);
   font-size: 11px;
-  color: var(--accent, var(--seal));
-  background: color-mix(in srgb, var(--accent, var(--seal)) 10%, transparent);
-  border: 1px solid color-mix(in srgb, var(--accent, var(--seal)) 26%, transparent);
+  color: var(--accent, var(--ink));
+  background: color-mix(in srgb, var(--accent, var(--ink)) 10%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent, var(--ink)) 26%, transparent);
   padding: 5px 10px;
   border-radius: 100px;
   white-space: nowrap;
   transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
 .tag:hover {
-  background: var(--accent, var(--seal));
+  background: var(--accent, var(--ink));
   color: var(--seal-ink);
-  border-color: var(--accent, var(--seal));
+  border-color: var(--accent, var(--ink));
 }
 
 .chip {
@@ -711,8 +708,8 @@ html.lenis body {
   font-size: 11px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--accent, var(--seal));
-  background: color-mix(in srgb, var(--accent, var(--seal)) 12%, transparent);
+  color: var(--accent, var(--ink));
+  background: color-mix(in srgb, var(--accent, var(--ink)) 12%, transparent);
   padding: 6px 13px;
   border-radius: 100px;
   margin-bottom: 14px;
@@ -756,7 +753,7 @@ html.lenis body {
 }
 .work-row:hover {
   background: var(--hover);
-  box-shadow: inset 3px 0 0 var(--accent, var(--seal));
+  box-shadow: inset 3px 0 0 var(--accent, var(--ink));
 }
 .work-row-arrow {
   position: absolute;
@@ -765,7 +762,7 @@ html.lenis body {
   font-family: var(--font-mono);
   font-size: clamp(1.1rem, 2vw, 1.35rem);
   line-height: 1;
-  color: var(--accent, var(--seal));
+  color: var(--accent, var(--ink));
   opacity: 0;
   transform: translateX(-6px);
   transition: opacity 0.25s, transform 0.25s var(--ease);
@@ -780,7 +777,7 @@ html.lenis body {
   font-weight: 600;
   font-size: clamp(2.4rem, 4vw, 3.2rem);
   line-height: 1;
-  color: var(--accent, var(--seal));
+  color: var(--accent, var(--ink));
 }
 .work-meta {
   font-family: var(--font-mono);
@@ -832,7 +829,7 @@ html.lenis body {
   width: 5px;
   height: 5px;
   margin-top: 8px;
-  background: var(--accent, var(--seal));
+  background: var(--accent, var(--ink));
   flex-shrink: 0;
 }
 
@@ -864,35 +861,27 @@ html.lenis body {
   font-size: 11.5px;
   letter-spacing: 0.06em;
   text-decoration: none;
-  color: var(--accent, var(--seal));
-  border-bottom: 1px solid color-mix(in srgb, var(--accent, var(--seal)) 45%, transparent);
+  color: var(--accent, var(--ink));
+  border-bottom: 1px solid color-mix(in srgb, var(--accent, var(--ink)) 45%, transparent);
   padding-bottom: 2px;
   transition: border-color 0.2s;
 }
 .research-links a:hover {
-  border-color: var(--accent, var(--seal));
+  border-color: var(--accent, var(--ink));
 }
 
-/* Section identity — a second and third ink alongside the primary vermilion seal,
-   drawn from the flags of Pakistan and Finland (where this work happened). Each
-   section also gets a faint wash of its accent instead of flat neutral gray. */
+/* Section identity — alternates black (plain ink, the default via the
+   var(--accent, var(--ink)) fallback used throughout) and Finland-blue down
+   the page: Experience / Product / Contact stay neutral, Education / Research
+   get the blue accent + a faint wash instead of flat neutral gray. */
+#education,
 #research {
   --accent: var(--seal-fi);
+  background: color-mix(in srgb, var(--seal-fi) 6%, var(--paper));
 }
-#products {
-  --accent: var(--seal-pk);
-}
-#experience,
-#research,
-#products,
-#contact {
-  background: color-mix(in srgb, var(--accent, var(--seal)) 6%, var(--paper));
-}
-[data-theme='dark'] #experience,
-[data-theme='dark'] #research,
-[data-theme='dark'] #products,
-[data-theme='dark'] #contact {
-  background: color-mix(in srgb, var(--accent, var(--seal)) 11%, var(--paper));
+[data-theme='dark'] #education,
+[data-theme='dark'] #research {
+  background: color-mix(in srgb, var(--seal-fi) 11%, var(--paper));
 }
 
 /* ════════════════════════════════════════════════════════════════
@@ -961,7 +950,7 @@ html.lenis body {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--seal-ink);
-  background: var(--seal);
+  background: var(--accent, var(--seal));
   padding: 3px 8px;
   border-radius: 100px;
 }
@@ -985,7 +974,7 @@ html.lenis body {
   gap: 16px;
 }
 .skill-group {
-  background: color-mix(in srgb, var(--seal) 4%, var(--card));
+  background: color-mix(in srgb, var(--accent, var(--ink)) 4%, var(--card));
   border: 1px solid var(--line);
   border-radius: 6px;
   padding: 16px 18px;
@@ -995,7 +984,7 @@ html.lenis body {
   font-size: 10.5px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--seal);
+  color: var(--accent, var(--seal));
   margin-bottom: 12px;
 }
 
