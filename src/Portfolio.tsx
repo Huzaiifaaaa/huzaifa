@@ -1,4 +1,5 @@
 import { Header } from './components/Header'
+import { ScrollProgress } from './components/ScrollProgress'
 import { SiteFooter } from './components/SiteFooter'
 import { Hero } from './sections/Hero'
 import { WorkSection } from './sections/WorkSection'
@@ -11,6 +12,7 @@ import { ContactSection } from './sections/ContactSection'
 export function Portfolio() {
   return (
     <>
+      <ScrollProgress />
       <Header />
       <main id="top">
         <Hero />

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400..800;1,400..700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500..700;1,500..700&family=Inter:ital,wght@0,400..800;1,400..700&family=JetBrains+Mono:wght@400;500&display=swap');
 @import 'tailwindcss';
 
 /* ════════════════════════════════════════════════════════════════
@@ -28,6 +28,7 @@
   --font-display: 'Inter', ui-sans-serif, system-ui, sans-serif;
   --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', monospace;
+  --font-name: 'Fraunces', Georgia, 'Times New Roman', serif;
 
   --maxw: 1180px;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
@@ -147,17 +148,18 @@ html.lenis body {
 .tag {
   font-family: var(--font-mono);
   font-size: 11px;
-  color: var(--ink2);
-  border: 1px solid var(--line);
+  color: var(--accent, var(--seal));
+  background: color-mix(in srgb, var(--accent, var(--seal)) 10%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent, var(--seal)) 26%, transparent);
   padding: 5px 10px;
   border-radius: 100px;
   white-space: nowrap;
   transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
 .tag:hover {
-  background: var(--seal);
+  background: var(--accent, var(--seal));
   color: var(--seal-ink);
-  border-color: var(--seal);
+  border-color: var(--accent, var(--seal));
 }
 
 .chip {
@@ -273,12 +275,30 @@ html.lenis body {
   text-transform: uppercase;
 }
 .nav-link {
+  position: relative;
   text-decoration: none;
   color: var(--ink);
   transition: color 0.2s;
 }
-.nav-link:hover {
+.nav-link:hover,
+.nav-link.is-active {
   color: var(--seal);
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -8px;
+  height: 1.5px;
+  background: var(--seal);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s var(--ease);
+}
+.nav-link:hover::after,
+.nav-link.is-active::after {
+  transform: scaleX(1);
 }
 .nav-end {
   display: flex;
@@ -346,6 +366,27 @@ html.lenis body {
   .nav-menu {
     display: flex;
   }
+}
+
+/* ════════════════════════════════════════════════════════════════
+   SCROLL PROGRESS
+   ════════════════════════════════════════════════════════════════ */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  z-index: 50;
+  pointer-events: none;
+}
+.scroll-progress-bar {
+  height: 100%;
+  width: 100%;
+  background: var(--seal);
+  transform: scaleX(0);
+  transform-origin: left;
+  will-change: transform;
 }
 
 /* ════════════════════════════════════════════════════════════════
@@ -450,7 +491,9 @@ html.lenis body {
   inset: 0;
   z-index: 0;
   cursor: crosshair;
-  touch-action: none;
+  /* Let vertical swipes scroll the page on touch devices — only non-vertical
+     pointer movement is reserved for the ink interaction. */
+  touch-action: pan-y;
 }
 .hero-fluid-canvas {
   display: block;
@@ -545,11 +588,11 @@ html.lenis body {
   margin-bottom: clamp(26px, 5vh, 54px);
 }
 .hero-name {
-  font-family: var(--font-display);
-  font-weight: 700;
+  font-family: var(--font-name);
+  font-weight: 600;
   font-size: clamp(2.6rem, 7vw, 5rem);
   line-height: 1;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   color: var(--ink);
 }
 .hero-name em {
@@ -663,11 +706,15 @@ html.lenis body {
   margin-bottom: clamp(30px, 4vw, 52px);
 }
 .section-kicker {
+  display: inline-flex;
   font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--seal);
+  color: var(--accent, var(--seal));
+  background: color-mix(in srgb, var(--accent, var(--seal)) 12%, transparent);
+  padding: 6px 13px;
+  border-radius: 100px;
   margin-bottom: 14px;
 }
 .section-title {
@@ -827,17 +874,25 @@ html.lenis body {
 }
 
 /* Section identity — a second and third ink alongside the primary vermilion seal,
-   drawn from the flags of Pakistan and Finland (where this work happened). */
+   drawn from the flags of Pakistan and Finland (where this work happened). Each
+   section also gets a faint wash of its accent instead of flat neutral gray. */
 #research {
   --accent: var(--seal-fi);
 }
 #products {
   --accent: var(--seal-pk);
 }
-#research .tag:hover,
-#products .tag:hover {
-  background: var(--accent);
-  border-color: var(--accent);
+#experience,
+#research,
+#products,
+#contact {
+  background: color-mix(in srgb, var(--accent, var(--seal)) 6%, var(--paper));
+}
+[data-theme='dark'] #experience,
+[data-theme='dark'] #research,
+[data-theme='dark'] #products,
+[data-theme='dark'] #contact {
+  background: color-mix(in srgb, var(--accent, var(--seal)) 11%, var(--paper));
 }
 
 /* ════════════════════════════════════════════════════════════════
@@ -930,7 +985,7 @@ html.lenis body {
   gap: 16px;
 }
 .skill-group {
-  background: var(--card);
+  background: color-mix(in srgb, var(--seal) 4%, var(--card));
   border: 1px solid var(--line);
   border-radius: 6px;
   padding: 16px 18px;
@@ -1027,6 +1082,9 @@ html.lenis body {
   }
   .hero-fluid {
     cursor: default;
+  }
+  .nav-link::after {
+    transition: none;
   }
 }
 

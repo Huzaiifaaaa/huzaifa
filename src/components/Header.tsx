@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { CvMenu } from './CvMenu'
 import { ThemeToggle } from './ThemeToggle'
+import { useActiveSection } from '../hooks/useActiveSection'
 
 const LINKS = [
   { href: '#experience', label: 'Experience' },
@@ -9,10 +10,12 @@ const LINKS = [
   { href: '#research', label: 'Research' },
   { href: '#contact', label: 'Contact' },
 ]
+const SECTION_IDS = LINKS.map((link) => link.href.slice(1))
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
+  const activeId = useActiveSection(SECTION_IDS)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 16)
@@ -36,7 +39,13 @@ export function Header() {
         <div className="nav-end">
           <nav className={`nav-links ${open ? 'is-open' : ''}`} aria-label="Sections">
             {LINKS.map((link) => (
-              <a key={link.href} href={link.href} className="nav-link" onClick={() => setOpen(false)}>
+              <a
+                key={link.href}
+                href={link.href}
+                className={`nav-link ${activeId === link.href.slice(1) ? 'is-active' : ''}`}
+                aria-current={activeId === link.href.slice(1) ? 'true' : undefined}
+                onClick={() => setOpen(false)}
+              >
                 {link.label}
               </a>
             ))}
