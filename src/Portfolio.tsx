@@ -6,9 +6,10 @@ import { WorkSection } from './sections/WorkSection'
 import { PathSection } from './sections/PathSection'
 import { ProductSection } from './sections/ProductSection'
 import { ResearchSection } from './sections/ResearchSection'
+import { CertificationsSection } from './sections/CertificationsSection'
 import { ContactSection } from './sections/ContactSection'
 
-/** Single-page portfolio: hero → work → path → product → research → contact. */
+/** Single-page portfolio: hero → work → path → product → research → certifications → contact. */
 export function Portfolio() {
   return (
     <>
@@ -20,6 +21,7 @@ export function Portfolio() {
         <PathSection />
         <ProductSection />
         <ResearchSection />
+        <CertificationsSection />
         <ContactSection />
       </main>
       <SiteFooter />

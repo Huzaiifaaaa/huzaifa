@@ -1,4 +1,4 @@
-// product.ts — Personal / founder products. Source of truth: Base_CV.pdf.
+// product.ts — Personal / founder products. Source of truth: Base_One_Page.pdf.
 
 export type Product = {
   /** display index, e.g. "01" */
@@ -18,18 +18,16 @@ export const products: Product[] = [
   {
     n: '01',
     meta: [''],
-    kicker: 'Founder & Sole Developer',
+    kicker: 'Founder & Full Stack Engineer',
     title: 'Nafalytics — Stock Portfolio Tracking Platform',
     summary:
-      'Nafalytics \u2014 from "Nafa" (profit) and "analytics" \u2014 is a stock market portfolio tracking application built from scratch to fill a gap in the Pakistani market for reliable portfolio management tools. Built solo over 3 months and used by 300 active users to track portfolios, real-time profit/loss, and trade activity.',
+      'Nafalytics — from "Nafa" (profit) and "analytics" — is a stock market portfolio tracking application built from scratch to fill a gap in the Pakistani market for reliable portfolio management tools. Built solo over 3 months and used by 300 active users to track portfolios, real-time profit/loss, and trade activity.',
     points: [
-
       'Built and launched the product from scratch in 3 months, growing to 300 active users tracking portfolios.',
-      'Built market views with visual graphs for price action and portfolio performance, plus historical performance analytics.',
+      'Developed real-time profit/loss tracking, historical performance analytics, automated payouts, and a notification engine.',
       'Implemented FIFO-based trade matching for accurate cost basis and realized gain/loss calculation.',
-      'Implemented dividend tracking with automated dividend notifications.',
       'Built a watchlist feature for users to monitor stocks outside their active holdings.',
-      'Owned the full product lifecycle \u2014 design, database, development, and cloud deployment \u2014 end to end as sole engineer.',
+      'Directed the full product lifecycle — design, database, development, and cloud deployment — end to end as sole engineer.',
       'Set up automated CI/CD workflows via GitHub Actions across Azure for continuous, reliable releases.',
     ],
     tech: ['Java', 'Spring Boot', 'React JS', 'PostgreSQL', 'Azure', 'Google Cloud', 'GitHub Actions'],

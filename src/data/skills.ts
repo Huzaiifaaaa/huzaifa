@@ -9,7 +9,7 @@ export const skills: SkillGroup[] = [
     items: ['Java', 'C#', 'Python', 'Go', 'JavaScript', 'TypeScript', 'SQL', 'C', 'C++'],
   },
   {
-    label: 'Backend & Frameworks',
+    label: 'Frameworks',
     items: ['Spring Boot', 'ASP.NET Core', 'Node.js', 'React JS', 'REST APIs', 'API Design', 'Microservices', 'Hibernate'],
   },
   {
@@ -22,15 +22,15 @@ export const skills: SkillGroup[] = [
   },
   {
     label: 'Cloud & DevOps',
-    items: ['Azure', 'Azure Kubernetes Service', 'KeyVault', 'Google Cloud', 'Docker', 'Kubernetes', 'Jenkins', 'GitHub Actions', 'CI/CD'],
+    items: ['Azure', 'Google Cloud', 'Docker', 'Kubernetes', 'Jenkins', 'GitHub Actions', 'CI/CD', 'Azure Sentinel'],
   },
   {
     label: 'Software Engineering',
-    items: ['System Design', 'Distributed Systems', 'Object-Oriented Programming', 'Agile/Scrum', 'Unit Testing', 'Test Automation', 'Technical Documentation'],
+    items: ['System Design', 'Distributed Systems', 'Object-Oriented Programming', 'Agile/Scrum', 'Unit Testing', 'Test Automation', 'Playwright', 'Selenium'],
   },
   {
     label: 'Security & Compliance',
-    items: ['PCI-DSS', 'GDPR', 'OWASP Top 10', 'SIEM', 'Vulnerability Assessment', 'Secure System Design'],
+    items: ['PCI-DSS', 'GDPR', 'OWASP Top 10', 'SIEM'],
   },
   {
     label: 'AI Tools',

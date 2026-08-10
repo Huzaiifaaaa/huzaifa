@@ -8,6 +8,7 @@ const LINKS = [
   { href: '#education', label: 'Education' },
   { href: '#products', label: 'Product' },
   { href: '#research', label: 'Research' },
+  { href: '#certifications', label: 'Certifications' },
   { href: '#contact', label: 'Contact' },
 ]
 const SECTION_IDS = LINKS.map((link) => link.href.slice(1))
