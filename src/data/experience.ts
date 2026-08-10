@@ -22,7 +22,7 @@ export const experience: Experience[] = [
     kicker: 'University of Oulu',
     title: 'Research Intern',
     summary:
-      'Research intern extending the AVISE security evaluation framework to Text-to-Image generative AI models, co-authoring a research paper submitted to NordSec 2026.',
+      'Research intern extending the AVISE security evaluation framework to Text-to-Image generative AI models, co-authored a research paper submitted to NordSec 2026.',
     points: [
       'Extended the AVISE security evaluation framework to Text-to-Image models, designing a 16-case adversarial test suite for style-escalation resistance.',
       'Co-authored a research paper formalizing security vulnerability methodologies for generative AI systems, submitted to NordSec 2026.',
